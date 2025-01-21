@@ -1,3 +1,9 @@
-export default function Home() {
-  return <div></div>
+import { Landing } from "@/components"
+
+export default async function Home() {
+  return (
+    <>
+      <Landing />
+    </>
+  )
 }
