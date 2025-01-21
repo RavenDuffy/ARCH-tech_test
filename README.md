@@ -39,3 +39,7 @@ endpoints of your choice.
 - Weird naming in tailwind config
 - Swap out some larger components (i.e. Landing.tsx) with a nested Layout
 - Currently not including Loading or Error files which would make the overall experience better (especially due to the missing Launch pages)
+
+### Planning
+
+![planning_dia](ARCH_Tech.png)
