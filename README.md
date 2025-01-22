@@ -30,10 +30,20 @@ endpoints of your choice.
   - /query routes use populate arrays to fill out missing information (or you can grab the uuid and refetch)
 - endpoints: launches (v5), crew, ships(?)
 
+### Current Application
+
+Currently, the application contacts three endpoints of the SpaceX api:
+
+- https://api.spacexdata.com/v5/launches/latest
+- https://api.spacexdata.com/v4/crew/query
+- https://api.spacexdata.com/v4/crew/:id
+
+The latest launch call is used on the home screen and can be clicked to go (nowhere currently but this is where the launch pages would've been hooked up - explained in the next section). When the Crew link is selected on the nav bar you're taken to a page where 10 crew members are displayed, these details are populated using the crew query call. Any of these crew members can be clicked to go to their specific crew page which will reveal a little more info about them (a list of their missions - or launches). The specific pages are populated using a call to the crew :id endpoint. Each launch is clickable and would take you to their specific launch page (but this is currently non functional).
+
 ### Improvements
 
 - Replace next api calls with api calls in the components as this would allow for serverside components instead of having to put everything on the client
-- Create an api wrapper so code isn't as samey in some places
+- Create an api call wrapper so code isn't as samey in some places. Currently, api calls are all done in their specific component but, due to the calls all working extremely similarly this would've benefitted from a single hook to make these calls that could just be used in each component.
 - Finish launches calls
 - Improve current types (in the types.ts file and otherwise)
 - Weird naming in tailwind config
